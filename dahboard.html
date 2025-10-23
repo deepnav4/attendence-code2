@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container-main">
+
+    <!-- Sidebar -->
+    <aside class="panel-sidebar">
+      <div class="panel-header">
+        <h2 class="panel-logo">PUNCHING</h2>
+      </div>
+
+      <div class="nav-container">
+        <ul class="nav-list" id="nav-list">
+
+          <a href="dahboard.html" class="nav-link active">
+            <li class="nav-item">
+              <img src="img/dashboard.svg" alt="Dashboard">
+              Dashboard
+            </li>
+          </a>
+
+          <a href="emplyee.html" class="nav-link">
+            <li class="nav-item ">
+              <img src="img/user.svg" alt="Employee">
+              Employee
+            </li>
+          </a>
+
+          <a href="checkout.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/import.svg" alt="Check In-Out">
+              Check In-Out
+            </li>
+          </a>
+
+          <a href="project.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/card.svg" alt="Projects">
+              Projects
+            </li>
+          </a>
+
+          <a href="attendance.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/calendar-1.svg" alt="Attendance">
+              Attendance
+            </li>
+          </a>
+
+          <a href="leave.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/clipboard-text.svg" alt="Leaves">
+              Leave
+            </li>
+          </a>
+
+          <a href="holidays.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/security-user.svg" alt="Holidays">
+              Holidays
+            </li>
+          </a>
+
+          <a href="performance.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/status-up.svg" alt="Performance">
+              Performance
+            </li>
+          </a>
+
+          <a href="currentTask.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/chart.svg" alt="Current Tasks">
+              Current Task
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/ghost.svg" alt="Suggestion">
+              Suggestion
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/chart-success.svg" alt="Designation">
+              Designation
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/book.svg" alt="Punching Status">
+              Punching Status
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/clipboard-tick.svg" alt="Leaves History">
+              Leaves History
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/setting-2.svg" alt="Setting">
+              Setting
+            </li>
+          </a>
+
+        </ul>
+      </div>
+    </aside>
+
+
+
+    <!-- Main Area -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <header class="header-main">
+        <button class="btn-toggle" id="btn-toggle">☰</button>
+        <div class="header-right-section">
+          <img src="img/noti.svg">
+          <div class="dropdown-wrapper">
+            <div class="dropdown-toggles" id="dropdown-btn">
+              <img src="img/user-img.svg" alt="User Avatar" class="user-avatar">
+              <img src="img/down.svg" alt="Dropdown Icon" class="icon-dropdown">
+            </div>
+            <div class="dropdown-menu-wrapper" id="dropdown-menu-wrapper">
+              <p>Profile</p>
+              <p>Settings</p>
+              <p>Logout</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Content -->
+      <div class="dashboard-container">
+
+        <!-- Welcome Header -->
+        <div class="welcome-header">
+          <h1>Welcome Back</h1>
+          <p>Welcome to dashboard</p>
+        </div>
+
+        <!-- Top Stats Cards -->
+        <div class="top-stats">
+          <div class="stat-box">
+            <div class="stat-label">
+              <span>Employee</span>
+              <img src="img/side.svg" alt="arrow" class="arrow-icon">
+            </div>
+            <h2>750</h2>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-label">
+              <span>Projects</span>
+              <img src="img/side.svg" alt="arrow" class="arrow-icon">
+            </div>
+            <h2>30</h2>
+          </div>
+
+          <div class="stat-box blue-border">
+            <div class="stat-label">
+              <span>Holidays</span>
+              <img src="img/side.svg" alt="arrow" class="arrow-icon">
+            </div>
+            <h2>12</h2>
+          </div>
+
+          <div class="stat-box blue-border">
+            <div class="stat-label">
+              <span>Current Leaves</span>
+              <img src="img/side.svg" alt="arrow" class="arrow-icon">
+            </div>
+            <h2>15</h2>
+          </div>
+
+          <!-- Employee Progress Chart -->
+          <div class="chart-box">
+            <div class="chart-header">
+              <h3>Employee Progress</h3>
+              <div class="custom-select">
+                <button class="user-badge">
+                  <img class="user-1" src="img/user.svg" alt="user">
+                  <span>Jessy Smith</span>
+                  <img src="img/down-w.svg" alt="down" class="down-arrow">
+                </button>
+                <ul class="select-options">
+                  <li>John Doe</li>
+                  <li> Jane Doe</li>
+                  <li>Alex Smith</li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="chart-content">
+              <div class="chart-bar" style="height: 55%;">
+                <div class="bar-fill"></div>
+              </div>
+              <div class="chart-bar" style="height: 70%;">
+                <div class="bar-fill"></div>
+              </div>
+              <div class="chart-bar" style="height: 45%;">
+                <div class="bar-fill"></div>
+              </div>
+              <div class="chart-bar" style="height: 85%;">
+                <div class="bar-fill"></div>
+              </div>
+              <div class="chart-bar" style="height: 40%;">
+                <div class="bar-fill"></div>
+              </div>
+              <div class="chart-bar" style="height: 75%;">
+                <div class="bar-fill"></div>
+              </div>
+              <div class="chart-bar" style="height: 65%;">
+                <div class="bar-fill"></div>
+              </div>
+              <div class="chart-bar" style="height: 80%;">
+                <div class="bar-fill"></div>
+              </div>
+              <div class="chart-bar" style="height: 60%;">
+                <div class="bar-fill"></div>
+              </div>
+              <div class="chart-bar" style="height: 90%;">
+                <div class="bar-fill"></div>
+              </div>
+              <div class="chart-bar" style="height: 75%;">
+                <div class="bar-fill"></div>
+              </div>
+              <div class="chart-bar" style="height: 95%;">
+                <div class="bar-fill"></div>
+              </div>
+            </div>
+            <div class="chart-labels">
+              <span>Jan</span>
+              <span>Feb</span>
+              <span>Mar</span>
+              <span>Apr</span>
+              <span>May</span>
+              <span>Jun</span>
+              <span>Jul</span>
+              <span>Aug</span>
+              <span>Sep</span>
+              <span>Oct</span>
+              <span>Nov</span>
+              <span>Dec</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="bottom-section">
+
+          <!-- Employee List -->
+          <div class="employee-list">
+            <div class="section-header">
+              <h3>Employee</h3>
+              <a href="#" class="see-all">See All</a>
+            </div>
+            <div class="employee-items">
+              <div class="employee-item">
+                <img src="img/user-img.svg" alt="Jessy Smith" class="emp-avatar">
+                <div class="emp-info">
+                  <h4>Jessy Smith</h4>
+                  <p>jessysmith25@gmail.com</p>
+                </div>
+                <div class="menu-container">
+                  <button class="menu-dots">
+                    <img src="img/more.svg" alt="More">
+                  </button>
+                  <div class="menu-popup">
+                    <button class="delete">Delete</button>
+                  </div>
+                </div>
+              </div>
+              <div class="employee-item">
+                <img src="img/user-img.svg" alt="Remy Yung" class="emp-avatar">
+                <div class="emp-info">
+                  <h4>Remy Yung</h4>
+                  <p>remy73@gmail.com</p>
+                </div>
+                <div class="menu-container">
+                  <button class="menu-dots">
+                    <img src="img/more.svg" alt="More">
+                  </button>
+                  <div class="menu-popup">
+
+                    <button class="delete">Delete</button>
+                  </div>
+                </div>
+              </div>
+              <div class="employee-item">
+                <img src="img/user-img.svg" alt="Jacob Jones" class="emp-avatar">
+                <div class="emp-info">
+                  <h4>Jacob Jones</h4>
+                  <p>jacobjones@gmail.com</p>
+                </div>
+                <div class="menu-container">
+                  <button class="menu-dots">
+                    <img src="img/more.svg" alt="More">
+                  </button>
+                  <div class="menu-popup">
+
+                    <button class="delete">Delete</button>
+                  </div>
+                </div>
+              </div>
+              <div class="employee-item">
+                <img src="img/user-img.svg" alt="James Anderson" class="emp-avatar">
+                <div class="emp-info">
+                  <h4>James Anderson</h4>
+                  <p>jamesanderson@gmail.com</p>
+                </div>
+                <div class="menu-container">
+                  <button class="menu-dots">
+                    <img src="img/more.svg" alt="More">
+                  </button>
+                  <div class="menu-popup">
+                    <button class="delete">Delete</button>
+                  </div>
+                </div>
+              </div>
+              <div class="employee-item">
+                <img src="img/user-img.svg" alt="Liam Walker" class="emp-avatar">
+                <div class="emp-info">
+                  <h4>Liam Walker</h4>
+                  <p>walker34@gmail.com</p>
+                </div>
+                <button class="menu-dots"><img src="img/more.svg"></button>
+              </div>
+              <div class="employee-item">
+                <img src="img/user-img.svg" alt="Noah Bennett" class="emp-avatar">
+                <div class="emp-info">
+                  <h4>Noah Bennett</h4>
+                  <p>noahbennett@gmail.com</p>
+                </div>
+                <button class="menu-dots"><img src="img/more.svg"></button>
+              </div>
+              <div class="employee-item">
+                <img src="img/user-img.svg" alt="Mason Brooks" class="emp-avatar">
+                <div class="emp-info">
+                  <h4>Mason Brooks</h4>
+                  <p>masonb@gmail.com</p>
+                </div>
+                <button class="menu-dots"><img src="img/more.svg"></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Progress Table -->
+          <div class="project-progress">
+            <div class="section-header">
+              <h3>Project Progress</h3>
+              <a href="#" class="see-all">See All</a>
+            </div>
+            <table class="progress-table">
+              <thead>
+                <tr>
+                  <th>Performance</th>
+                  <th>Total Hours</th>
+                  <th>Consumed Hours</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="progress-circle">
+                      <svg width="50" height="50">
+                        <circle cx="25" cy="25" r="20" fill="none" stroke="#e0e0e0" stroke-width="4" />
+                        <circle cx="25" cy="25" r="20" fill="none" stroke="#ff6b6b" stroke-width="4"
+                          stroke-dasharray="126" stroke-dashoffset="85" transform="rotate(-90 25 25)" />
+                      </svg>
+                      <span class="percent">32%</span>
+                    </div>
+                    <span class="project-name">Metalpaq</span>
+                  </td>
+                  <td>116 House</td>
+                  <td>110 House</td>
+                  <td>
+                    <div class="menu-container">
+                      <button class="menu-dots">
+                        <img src="img/more.svg" alt="More">
+                      </button>
+                      <div class="menu-popup">
+                        <button class="delete">Delete</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="progress-circle">
+                      <svg width="50" height="50">
+                        <circle cx="25" cy="25" r="20" fill="none" stroke="#e0e0e0" stroke-width="4" />
+                        <circle cx="25" cy="25" r="20" fill="none" stroke="#4CAF50" stroke-width="4"
+                          stroke-dasharray="126" stroke-dashoffset="32" transform="rotate(-90 25 25)" />
+                      </svg>
+                      <span class="percent">82%</span>
+                    </div>
+                    <span class="project-name">Rolly Restless</span>
+                  </td>
+                  <td>120 House</td>
+                  <td>80 House</td>
+                  <td>
+                    <div class="menu-container">
+                      <button class="menu-dots">
+                        <img src="img/more.svg" alt="More">
+                      </button>
+                      <div class="menu-popup">
+                        <button class="delete">Delete</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="progress-circle">
+                      <svg width="50" height="50">
+                        <circle cx="25" cy="25" r="20" fill="none" stroke="#e0e0e0" stroke-width="4" />
+                        <circle cx="25" cy="25" r="20" fill="none" stroke="#ff9800" stroke-width="4"
+                          stroke-dasharray="126" stroke-dashoffset="73" transform="rotate(-90 25 25)" />
+                      </svg>
+                      <span class="percent">42%</span>
+                    </div>
+                    <span class="project-name">Rolly Restless</span>
+                  </td>
+                  <td>788 House</td>
+                  <td>99 House</td>
+                  <td><button class="menu-dots"><img src="img/more.svg"></button></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="progress-circle">
+                      <svg width="50" height="50">
+                        <circle cx="25" cy="25" r="20" fill="none" stroke="#e0e0e0" stroke-width="4" />
+                        <circle cx="25" cy="25" r="20" fill="none" stroke="#2196F3" stroke-width="4"
+                          stroke-dasharray="126" stroke-dashoffset="45" transform="rotate(-90 25 25)" />
+                      </svg>
+                      <span class="percent">64%</span>
+                    </div>
+                    <span class="project-name">Rolly Restless</span>
+                  </td>
+                  <td>115 House</td>
+                  <td>110 House</td>
+                  <td><button class="menu-dots"><img src="img/more.svg"></button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <div class="menu-container">
+    <button class="menu-dots">
+      <img src="img/more.svg" alt="More">
+    </button>
+    <div class="menu-popup">
+      <button class="edit">Edit</button>
+      <button class="delete">Delete</button>
+    </div>
+  </div>
+
+</body>
+
+<script>
+  // add active class to current nav link
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    if (link.href === window.location.href) {
+      link.classList.add('active');
+    }
+  });
+</script>
+
+
+
+</html>

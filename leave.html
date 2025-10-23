@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leave</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container-main">
+
+    <!-- Sidebar -->
+    <aside class="panel-sidebar">
+      <div class="panel-header">
+        <h2 class="panel-logo">PUNCHING</h2>
+      </div>
+
+      <div class="nav-container">
+        <ul class="nav-list" id="nav-list">
+
+          <a href="dahboard.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/dashboard.svg" alt="Dashboard">
+              Dashboard
+            </li>
+          </a>
+
+          <a href="emplyee.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/user.svg" alt="Employee">
+              Employee
+            </li>
+          </a>
+
+          <a href="checkout.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/import.svg" alt="Check In-Out">
+              Check In-Out
+            </li>
+          </a>
+
+          <a href="project.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/card.svg" alt="Projects">
+              Projects
+            </li>
+          </a>
+
+          <a href="attendance.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/calendar-1.svg" alt="Attendance">
+              Attendance
+            </li>
+          </a>
+
+          <a href="leave.html" class="nav-link active">
+            <li class="nav-item">
+              <img src="img/clipboard-text.svg" alt="Leaves">
+              Leave
+            </li>
+          </a>
+
+          <a href="holidays.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/security-user.svg" alt="Holidays">
+              Holidays
+            </li>
+          </a>
+
+          <a href="performance.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/status-up.svg" alt="Performance">
+              Performance
+            </li>
+          </a>
+
+          <a href="currentTask.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/chart.svg" alt="Current Tasks">
+              Current Task
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/ghost.svg" alt="Suggestion">
+              Suggestion
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/chart-success.svg" alt="Designation">
+              Designation
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/book.svg" alt="Punching Status">
+              Punching Status
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/clipboard-tick.svg" alt="Leaves History">
+              Leaves History
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/setting-2.svg" alt="Setting">
+              Setting
+            </li>
+          </a>
+
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Area -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <header class="header-main">
+        <button class="btn-toggle" id="btn-toggle">☰</button>
+        <div class="header-right-section">
+          <img src="img/noti.svg">
+          <div class="dropdown-wrapper">
+            <div class="dropdown-toggles" id="dropdown-btn">
+              <img src="img/user-img.svg" alt="User Avatar" class="user-avatar">
+              <img src="img/down.svg" alt="Dropdown Icon" class="icon-dropdown">
+            </div>
+            <div class="dropdown-menu-wrapper" id="dropdown-menu-wrapper">
+              <p>Profile</p>
+              <p>Settings</p>
+              <p>Logout</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Leave Content -->
+      <div class="leave-container">
+        <!-- Page Header -->
+        <div class="leave-header">
+          <h1 class="page-title">Leave</h1>
+          <div class="leave-header-right">
+            <div class="search-box-leave">
+              <img src="img/search.svg" alt="Search" class="search-icon-leave">
+              <input type="text" placeholder="Search..." class="search-input-leave">
+            </div>
+            <select class="filter-select-leave">
+              <option value="">Current</option>
+              <option>All</option>
+              <option>Pending</option>
+              <option>Approved</option>
+              <option>Rejected</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Leave Content Layout -->
+        <div class="leave-content-layout">
+          <!-- Left Side - Leave List -->
+          <div class="leave-list-section">
+            <!-- Leave Card 1 -->
+            <div class="leave-card" 
+                 data-name="Serenity Martin" 
+                 data-email="serenity.martin@company.com"
+                 data-type="Full Day" 
+                 data-date="15-10-2025"
+                 data-date-text="15-10-2025"
+                 data-subject="Argent Leave"
+                 data-message="I would like to request leave for October 16-18, 2025. I will be back on October 19th. I have ensured that my current tasks are up to date, and I will make sure to hand over any pending work to my colleague before my leave. I will also be available on phone/email for any urgent matters.">
+              <div class="leave-card-header">
+                <div class="leave-user-info">
+                  <img src="img/user-img.svg" alt="Serenity Martin" class="leave-user-avatar">
+                  <div class="leave-user-details">
+                    <h3 class="leave-user-name">Serenity Martin</h3>
+                    <p class="leave-type-text">Leave Type: <span class="leave-type-value">Full Day</span></p>
+                  </div>
+                </div>
+                <span class="leave-date-badge">15-10-2025</span>
+              </div>
+              <p class="leave-message">I would like to request leave for October 16-18, 2025. I will be back on ...</p>
+            </div>
+
+            <!-- Leave Card 2 -->
+            <div class="leave-card" 
+                 data-name="John Miller" 
+                 data-email="john.miller@company.com"
+                 data-type="Half Day" 
+                 data-date="15-10-2025"
+                 data-date-text="15-10-2025"
+                 data-subject="Medical Appointment"
+                 data-message="I need to request a half-day leave on October 20, 2025, for a medical appointment. I will be available in the morning and will ensure all urgent tasks are completed before leaving. I will return the next day fully available.">
+              <div class="leave-card-header">
+                <div class="leave-user-info">
+                  <img src="img/user-img.svg" alt="John Miller" class="leave-user-avatar">
+                  <div class="leave-user-details">
+                    <h3 class="leave-user-name">John Miller</h3>
+                    <p class="leave-type-text">Leave Type: <span class="leave-type-value">Half Day</span></p>
+                  </div>
+                </div>
+                <span class="leave-date-badge">15-10-2025</span>
+              </div>
+              <p class="leave-message">I need to request a half-day leave on October 20, 2025, for a medical ...</p>
+            </div>
+
+            <!-- Leave Card 3 -->
+            <div class="leave-card active-leave" 
+                 data-name="Emma Johnson" 
+                 data-email="emma.johnson@company.com"
+                 data-type="Full Day" 
+                 data-date="Yesterday"
+                 data-date-text="Yesterday"
+                 data-subject="Personal Emergency"
+                 data-message="I am writing to request an urgent leave for October 21-22, 2025, due to a personal emergency. I have informed my team lead and made arrangements for coverage of my responsibilities. I will remain reachable via email and phone for critical matters.">
+              <div class="leave-card-header">
+                <div class="leave-user-info">
+                  <img src="img/user-img.svg" alt="Emma Johnson" class="leave-user-avatar">
+                  <div class="leave-user-details">
+                    <h3 class="leave-user-name">Emma Johnson</h3>
+                    <p class="leave-type-text">Leave Type: <span class="leave-type-value">Full Day</span></p>
+                  </div>
+                </div>
+                <span class="leave-date-badge">15-10-2025</span>
+              </div>
+              <p class="leave-message">I am writing to request an urgent leave for October 21-22, 2025, due to ...</p>
+            </div>
+
+            <!-- Leave Card 4 -->
+            <div class="leave-card" 
+                 data-name="Matthew Taylor" 
+                 data-email="matthew.taylor@company.com"
+                 data-type="Full Day" 
+                 data-date="15-10-2025"
+                 data-date-text="15-10-2025"
+                 data-subject="Family Function"
+                 data-message="I would like to request leave for October 25, 2025, to attend a family function. All my current assignments will be completed before this date, and I have coordinated with my team for any support needed during my absence.">
+              <div class="leave-card-header">
+                <div class="leave-user-info">
+                  <img src="img/user-img.svg" alt="Matthew Taylor" class="leave-user-avatar">
+                  <div class="leave-user-details">
+                    <h3 class="leave-user-name">Matthew Taylor</h3>
+                    <p class="leave-type-text">Leave Type: <span class="leave-type-value">Full Day</span></p>
+                  </div>
+                </div>
+                <span class="leave-date-badge">15-10-2025</span>
+              </div>
+              <p class="leave-message">I would like to request leave for October 25, 2025, to attend a family ...</p>
+            </div>
+
+            <!-- Leave Card 5 -->
+            <div class="leave-card" 
+                 data-name="Logan Clark" 
+                 data-email="logan.clark@company.com"
+                 data-type="Full Day" 
+                 data-date="15-10-2025"
+                 data-date-text="15-10-2025"
+                 data-subject="Vacation Leave"
+                 data-message="I am requesting vacation leave from October 28 to November 1, 2025. I have completed all pending projects and briefed my team about ongoing tasks. I will be checking emails periodically and can be reached for emergencies.">
+              <div class="leave-card-header">
+                <div class="leave-user-info">
+                  <img src="img/user-img.svg" alt="Logan Clark" class="leave-user-avatar">
+                  <div class="leave-user-details">
+                    <h3 class="leave-user-name">Logan Clark</h3>
+                    <p class="leave-type-text">Leave Type: <span class="leave-type-value">Full Day</span></p>
+                  </div>
+                </div>
+                <span class="leave-date-badge">15-10-2025</span>
+              </div>
+              <p class="leave-message">I am requesting vacation leave from October 28 to November 1, 2025. I have ...</p>
+            </div>
+
+            <!-- Leave Card 6 -->
+            <div class="leave-card" 
+                 data-name="Liam Walker" 
+                 data-email="liam.walker@company.com"
+                 data-type="Full Day" 
+                 data-date="15-10-2025"
+                 data-date-text="15-10-2025"
+                 data-subject="Training Session"
+                 data-message="I need to request leave for November 5, 2025, to attend a professional training session that will enhance my skills relevant to my current role. This training is approved by my department head and will benefit our ongoing projects.">
+              <div class="leave-card-header">
+                <div class="leave-user-info">
+                  <img src="img/user-img.svg" alt="Liam Walker" class="leave-user-avatar">
+                  <div class="leave-user-details">
+                    <h3 class="leave-user-name">Liam Walker</h3>
+                    <p class="leave-type-text">Leave Type: <span class="leave-type-value">Full Day</span></p>
+                  </div>
+                </div>
+                <span class="leave-date-badge">15-10-2025</span>
+              </div>
+              <p class="leave-message">I need to request leave for November 5, 2025, to attend a professional ...</p>
+            </div>
+          </div>
+
+          <!-- Right Side - Leave Details -->
+          <div class="leave-detail-section">
+            <div class="leave-detail-card">
+              <!-- Detail Header -->
+              <div class="leave-detail-header">
+                <div class="detail-user-info">
+                  <img src="img/user-img.svg" alt="User Avatar" class="detail-user-avatar" id="detail-avatar">
+                  <div class="detail-user-text">
+                    <h2 class="detail-user-name" id="detail-name">Emma Johnson</h2>
+                    <p class="detail-leave-type">Leave Type: <span class="detail-leave-value" id="detail-type">Full Day</span></p>
+                  </div>
+                </div>
+                <span class="detail-date-badge" id="detail-date-text">Yesterday</span>
+              </div>
+
+              <!-- Subject Section -->
+              <div class="leave-subject-section">
+                <p class="subject-label">Subject Type : <span class="subject-value" id="detail-subject">Personal Emergency</span></p>
+              </div>
+
+              <!-- Leave Message -->
+              <div class="leave-message-section">
+                <p class="leave-detail-message" id="detail-message">
+                  I am writing to request an urgent leave for October 21-22, 2025, due to a personal emergency. I have informed my team lead and made arrangements for coverage of my responsibilities. I will remain reachable via email and phone for critical matters.
+                </p>
+                <p class="leave-regards">
+                  Best regards,<br>
+                  <span id="detail-signature">Emma Johnson</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Backup inline script to ensure leave cards work
+    window.addEventListener('load', function() {
+      console.log('Page fully loaded');
+      const cards = document.querySelectorAll('.leave-card');
+      console.log('Found cards:', cards.length);
+      
+      if (cards.length > 0) {
+        cards.forEach(function(card) {
+          card.style.cursor = 'pointer';
+          card.addEventListener('click', function() {
+            console.log('Card clicked!');
+          });
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

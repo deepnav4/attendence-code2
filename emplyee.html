@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-main">
+    <aside class="panel-sidebar">
+      <div class="panel-header">
+        <h2 class="panel-logo">PUNCHING</h2>
+      </div>
+
+      <div class="nav-container">
+        <ul class="nav-list" id="nav-list">
+
+          <a href="dahboard.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/dashboard.svg" alt="Dashboard">
+              Dashboard
+            </li>
+          </a>
+
+          <a href="emplyee.html" class="nav-link active">
+            <li class="nav-item ">
+              <img src="img/user.svg" alt="Employee">
+              Employee
+            </li>
+          </a>
+
+          <a href="checkout.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/import.svg" alt="Check In-Out">
+              Check In-Out
+            </li>
+          </a>
+
+          <a href="project.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/card.svg" alt="Projects">
+              Projects
+            </li>
+          </a>
+
+          <a href="attendance.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/calendar-1.svg" alt="Attendance">
+              Attendance
+            </li>
+          </a>
+
+          <a href="leave.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/clipboard-text.svg" alt="Leaves">
+              Leave
+            </li>
+          </a>
+
+          <a href="holidays.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/security-user.svg" alt="Holidays">
+              Holidays
+            </li>
+          </a>
+
+          <a href="performance.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/status-up.svg" alt="Performance">
+              Performance
+            </li>
+          </a>
+
+          <a href="currentTask.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/chart.svg" alt="Current Tasks">
+              Current Task
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/ghost.svg" alt="Suggestion">
+              Suggestion
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/chart-success.svg" alt="Designation">
+              Designation
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/book.svg" alt="Punching Status">
+              Punching Status
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/clipboard-tick.svg" alt="Leaves History">
+              Leaves History
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/setting-2.svg" alt="Setting">
+              Setting
+            </li>
+          </a>
+
+        </ul>
+      </div>
+    </aside>
+
+
+
+
+    <!-- Main Area -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <header class="header-main">
+        <button class="btn-toggle" id="btn-toggle">☰</button>
+        <div class="header-right-section">
+          <img src="img/noti.svg" onclick="toggleNotificationPopup()">
+          <div class="dropdown-wrapper">
+            <div class="dropdown-toggles" id="dropdown-btn">
+              <img src="img/user-img.svg" alt="User Avatar" class="user-avatar">
+              <img src="img/down.svg" alt="Dropdown Icon" class="icon-dropdown">
+            </div>
+            <div class="dropdown-menu-wrapper" id="dropdown-menu-wrapper">
+              <p>Profile</p>
+              <p>Settings</p>
+              <p>Logout</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Employee Content -->
+      <div class="employee-container">
+
+        <!-- Page Header -->
+        <div class="employee-header">
+          <h1>Employee</h1>
+        </div>
+
+        <!-- Filters and Actions Bar -->
+        <div class="employee-actions-bar">
+          <div class="left-actions">
+            <div class="search-box" style="padding: 0px;">
+              <img src="img/search.svg" alt="Search" class="search-icon">
+              <input type="text" placeholder="Search..." class="search-input">
+            </div>
+            <select class="filter-select">
+              <option value="active">Active</option>
+              <option value="inactive">Inactive</option>
+              <option value="all">All</option>
+            </select>
+          </div>
+          <button class="btn-add" data-bs-toggle="modal" data-bs-target="#myModal">
+            <span class="plus-icon">+</span>
+            ADD
+          </button>
+        </div>
+
+        <!-- Employee Table -->
+        <div class="employee-table-wrapper">
+          <table class="employee-table">
+            <thead>
+              <tr>
+                <th class="sortable">
+                  Employee
+                  <img src="img/colm.svg" alt="sort" class="sort-icon">
+                </th>
+                <th>Date Of Birth</th>
+                <th>Joining Date</th>
+                <th>Destination</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="employee-cell">
+                    <img src="img/user-img.svg" alt="Serenity Martin" class="employee-avatar">
+                    <div class="employee-info">
+                      <div class="employee-name">Serenity Martin</div>
+                      <div class="employee-email">serenitymartin@gmail.com</div>
+                    </div>
+                  </div>
+                </td>
+                <td>3 Apr, 1998</td>
+                <td>12 Nov, 2024</td>
+                <td>UI/Ux designer</td>
+                <td>
+                  <div class="menu-container">
+                    <button class="menu-dots">
+                      <img src="img/more.svg" alt="More">
+                    </button>
+                    <div class="menu-popup">
+                      <button class="delete">Edit</button>
+                      <button class="delete">Block</button>
+                      <button class="delete">Add Task</button>
+                      <button class="delete">Yearly Performance</button>
+                      <button class="delete">Summary</button>
+                      <button class="delete">Daily Status</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="employee-cell">
+                    <img src="img/user-img.svg" alt="Ava Brown" class="employee-avatar">
+                    <div class="employee-info">
+                      <div class="employee-name">Ava Brown</div>
+                      <div class="employee-email">brown34@gmail.com</div>
+                    </div>
+                  </div>
+                </td>
+                <td>5 May, 1995</td>
+                <td>11 Sep, 2025</td>
+                <td>Sr software Engineer</td>
+                <td><button class="action-dots"><img src="img/more.svg"></button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="employee-cell">
+                    <img src="img/user-img.svg" alt="Brooklyn Simmons" class="employee-avatar">
+                    <div class="employee-info">
+                      <div class="employee-name">Brooklyn Simmons</div>
+                      <div class="employee-email">simmons7@gmail.com</div>
+                    </div>
+                  </div>
+                </td>
+                <td>3 Apr, 1998</td>
+                <td>12 Nov, 2023</td>
+                <td>React JS Developer</td>
+                <td><button class="action-dots"><img src="img/more.svg"></button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="employee-cell">
+                    <img src="img/user-img.svg" alt="Mia Davis" class="employee-avatar">
+                    <div class="employee-info">
+                      <div class="employee-name">Mia Davis</div>
+                      <div class="employee-email">davismia6@gmail.com</div>
+                    </div>
+                  </div>
+                </td>
+                <td>23 May, 2002</td>
+                <td>24 Nov, 2024</td>
+                <td>Node JS Developer</td>
+                <td><button class="action-dots"><img src="img/more.svg"></button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="employee-cell">
+                    <img src="img/user-img.svg" alt="Mia Davis" class="employee-avatar">
+                    <div class="employee-info">
+                      <div class="employee-name">Mia Davis</div>
+                      <div class="employee-email">davismia6@gmail.com</div>
+                    </div>
+                  </div>
+                </td>
+                <td>13 Dec, 1994</td>
+                <td>12 Sep, 2025</td>
+                <td>React JS Devloper</td>
+                <td><button class="action-dots"><img src="img/more.svg"></button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="employee-cell">
+                    <img src="img/user-img.svg" alt="Abigail Thomas" class="employee-avatar">
+                    <div class="employee-info">
+                      <div class="employee-name">Abigail Thomas</div>
+                      <div class="employee-email">thomas445@gmail.com</div>
+                    </div>
+                  </div>
+                </td>
+                <td>27 June, 2000</td>
+                <td>13 Nov, 2023</td>
+                <td>Flutter Developer</td>
+                <td><button class="action-dots"><img src="img/more.svg"></button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="employee-cell">
+                    <img src="img/user-img.svg" alt="Charlotte Taylor" class="employee-avatar">
+                    <div class="employee-info">
+                      <div class="employee-name">Charlotte Taylor</div>
+                      <div class="employee-email">thomas445@gmail.com</div>
+                    </div>
+                  </div>
+                </td>
+                <td>11 May, 1998</td>
+                <td>23 June, 2023</td>
+                <td>React Native Developer</td>
+                <td><button class="action-dots"><img src="img/more.svg"></button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="employee-cell">
+                    <img src="img/user-img.svg" alt="Ava Wilson" class="employee-avatar">
+                    <div class="employee-info">
+                      <div class="employee-name">Ava Wilson</div>
+                      <div class="employee-email">isabella45@gmail.com</div>
+                    </div>
+                  </div>
+                </td>
+                <td>3 Apr, 1994</td>
+                <td>12 Nov, 2024</td>
+                <td>UI/Ux designer</td>
+                <td><button class="action-dots"><img src="img/more.svg"></button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="employee-cell">
+                    <img src="img/user-img.svg" alt="Evelyn Clark" class="employee-avatar">
+                    <div class="employee-info">
+                      <div class="employee-name">Evelyn Clark</div>
+                      <div class="employee-email">clark133@gmail.com</div>
+                    </div>
+                  </div>
+                </td>
+                <td>1st Feb, 1997</td>
+                <td>12 June, 2025</td>
+                <td>Node JS Developer</td>
+                <td><button class="action-dots"><img src="img/more.svg"></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination-wrapper">
+          <select class="rows-select">
+            <option value="20">20 Rows</option>
+            <option value="50">50 Rows</option>
+            <option value="100">100 Rows</option>
+          </select>
+          <div class="pagination-controls">
+            <button class="page-btn prev-btn">
+              <img src="img/right.svg" alt="Previous">
+            </button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn next-btn">
+              <img src="img/left.svg" alt="Next">
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class=" modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" style="font-size: 20px;">Add Employee</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="profile-form-box">
+            <div class="photo-upload">
+              <div class="photo-circle" id="photo-preview">
+                <span><img src="img/add-3.svg"></span>
+              </div>
+              <input type="file" id="photo-input" accept="image/*" hidden>
+            </div>
+
+            <form class="user-entry-form">
+              <div class="input-field">
+                <label>First Name</label>
+                <input type="text" placeholder="First Name">
+              </div>
+
+              <div class="input-field">
+                <label>Last Name</label>
+                <input type="text" placeholder="Last Name">
+              </div>
+
+              <div class="input-field">
+                <label>Join Date</label>
+                <input type="date" placeholder="Enter Date">
+              </div>
+
+              <div class="input-field">
+                <label>Phone Number</label>
+                <input type="text" placeholder="Enter Phone Number">
+              </div>
+
+              <div class="input-field">
+                <label>Email</label>
+                <input type="email" placeholder="Enter Email">
+              </div>
+
+              <div class="input-field">
+                <label>Destination</label>
+                <input type="text" placeholder="Enter Destination">
+              </div>
+
+              <div class="input-field">
+                <label>Gender</label>
+                <select>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="input-field">
+                <label>Skype ID</label>
+                <input type="text" placeholder="Male">
+              </div>
+
+              <div class="end-button">
+                <button type="submit" class="submit-btn">Submit</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Popup -->
+  <div class="notification-popup hidden" id="notificationPopup">
+    <div class="notification-header">
+      <h3>Notifications</h3>
+      <button class="notification-close" onclick="toggleNotificationPopup()">✕</button>
+    </div>
+    
+    <div class="notification-list">
+      <!-- Notification 1 -->
+      <div class="notification-item">
+        <img src="img/user-img.svg" alt="Kane william" class="notification-avatar">
+        <div class="notification-content">
+          <p class="notification-text"><strong>Kane william</strong> applied leave from 2025-03-06 to 2025-03-06</p>
+          <span class="notification-time">5 march at 11:33 am</span>
+        </div>
+        <button class="notification-delete">
+          <svg class="notification-delete-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Notification 2 -->
+      <div class="notification-item">
+        <img src="img/user-img.svg" alt="Michael Johnson" class="notification-avatar">
+        <div class="notification-content">
+          <p class="notification-text"><strong>Michael Johnson</strong> applied leave from 2025-03-06 to 2025-03-06</p>
+          <span class="notification-time">5 march at 11:33 am</span>
+        </div>
+        <button class="notification-delete">
+          <svg class="notification-delete-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Notification 3 -->
+      <div class="notification-item">
+        <img src="img/user-img.svg" alt="Robert Williams" class="notification-avatar">
+        <div class="notification-content">
+          <p class="notification-text"><strong>Robert Williams</strong> applied leave from 2025-03-06 to 2025-03-06</p>
+          <span class="notification-time">5 march at 11:33 am</span>
+        </div>
+        <button class="notification-delete">
+          <svg class="notification-delete-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Notification 4 -->
+      <div class="notification-item">
+        <img src="img/user-img.svg" alt="David Brown" class="notification-avatar">
+        <div class="notification-content">
+          <p class="notification-text"><strong>David Brown</strong> applied leave from 2025-03-06 to 2025-03-06</p>
+          <span class="notification-time">5 march at 11:33 am</span>
+        </div>
+        <button class="notification-delete">
+          <svg class="notification-delete-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Notification 5 -->
+      <div class="notification-item">
+        <img src="img/user-img.svg" alt="Andrew Taylor" class="notification-avatar">
+        <div class="notification-content">
+          <p class="notification-text"><strong>Andrew Taylor</strong> applied leave from 2025-03-06 to 2025-03-06</p>
+          <span class="notification-time">5 march at 11:33 am</span>
+        </div>
+        <button class="notification-delete">
+          <svg class="notification-delete-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Notification 6 -->
+      <div class="notification-item">
+        <img src="img/user-img.svg" alt="Daniel White" class="notification-avatar">
+        <div class="notification-content">
+          <p class="notification-text"><strong>Daniel White</strong> applied leave from 2025-03-06 to 2025-03-06</p>
+          <span class="notification-time">5 march at 11:33 am</span>
+        </div>
+        <button class="notification-delete">
+          <svg class="notification-delete-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Notification 7 -->
+      <div class="notification-item">
+        <img src="img/user-img.svg" alt="Ryan Harris" class="notification-avatar">
+        <div class="notification-content">
+          <p class="notification-text"><strong>Ryan Harris</strong> applied leave from 2025-03-06 to 2025-03-06</p>
+          <span class="notification-time">5 march at 11:33 am</span>
+        </div>
+        <button class="notification-delete">
+          <svg class="notification-delete-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Notification 8 -->
+      <div class="notification-item">
+        <img src="img/user-img.svg" alt="Andrew Taylor" class="notification-avatar">
+        <div class="notification-content">
+          <p class="notification-text"><strong>Andrew Taylor</strong> applied leave from 2025-03-06 to 2025-03-06</p>
+          <span class="notification-time">5 march at 11:33 am</span>
+        </div>
+        <button class="notification-delete">
+          <svg class="notification-delete-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script>
+    // Sidebar toggle
+    const toggleBtn = document.getElementById('btn-toggle');
+    const sidebar = document.querySelector('.panel-sidebar');
+
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+      document.body.classList.toggle('sidebar-open');
+    });
+
+    document.body.addEventListener('click', e => {
+      if (e.target === document.body && document.body.classList.contains('sidebar-open')) {
+        sidebar.classList.remove('open');
+        document.body.classList.remove('sidebar-open');
+      }
+    });
+
+    // Menu active toggle (works with <a> inside .nav-item)
+    const navList = document.getElementById('nav-list');
+
+    navList.addEventListener('click', (e) => {
+      const link = e.target.closest('.nav-item a');
+      if (!link) return; // ignore clicks outside links
+
+      // Remove active from all
+      document.querySelectorAll('.nav-item').forEach(li => li.classList.remove('active'));
+
+      // Add active to clicked li
+      link.parentElement.classList.add('active');
+
+      // Close sidebar on mobile
+      if (window.innerWidth <= 900) {
+        sidebar.classList.remove('open');
+        document.body.classList.remove('sidebar-open');
+      }
+    });
+
+    // User dropdown
+    const dropdownBtn = document.getElementById('dropdown-btn');
+    const dropdownWrapper = document.querySelector('.dropdown-wrapper');
+
+    dropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdownWrapper.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!dropdownWrapper.contains(e.target)) {
+        dropdownWrapper.classList.remove('active');
+      }
+    });
+  </script>
+
+  <script>
+    const photoPreview = document.getElementById('photo-preview');
+    const photoInput = document.getElementById('photo-input');
+
+    // Open file picker on circle click
+    photoPreview.addEventListener('click', () => {
+      photoInput.click();
+    });
+
+    // Show selected image inside circle
+    photoInput.addEventListener('change', () => {
+      const file = photoInput.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = () => {
+          photoPreview.innerHTML = `<img src="${reader.result}" alt="Preview">`;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+
+  <script>
+    document.querySelectorAll('.menu-dots').forEach(button => {
+      button.addEventListener('click', (e) => {
+        const popup = button.nextElementSibling;
+        popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+
+    // Close popup if clicked outside
+    document.addEventListener('click', (e) => {
+      document.querySelectorAll('.menu-popup').forEach(pp => {
+        if (!pp.contains(e.target) && !pp.previousElementSibling.contains(e.target)) {
+          pp.style.display = 'none';
+        }
+      });
+    });
+
+
+    function toggleNotificationPopup() {
+      console.log('clicked');
+      const popup = document.querySelector('#notificationPopup');
+      if (popup) {
+        popup.classList.toggle('hidden');
+        console.log('Popup toggled, hidden:', popup.classList.contains('hidden'));
+      } else {
+        console.error('Notification popup not found!');
+      }
+    }
+
+    // Close popup when clicking outside
+    document.addEventListener('click', function(e) {
+      const popup = document.querySelector('#notificationPopup');
+      const notiBtn = document.querySelector('img[src="img/noti.svg"]');
+      
+      if (popup && notiBtn && !popup.contains(e.target) && e.target !== notiBtn) {
+        popup.classList.add('hidden');
+      }
+    });
+
+    // Prevent popup from closing when clicking inside it
+    const popup = document.querySelector('#notificationPopup');
+    if (popup) {
+      popup.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+    }
+  </script>
+</body>
+
+</html>

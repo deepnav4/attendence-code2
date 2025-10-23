@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holidays</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container-main">
+
+    <!-- Sidebar -->
+    <aside class="panel-sidebar">
+      <div class="panel-header">
+        <h2 class="panel-logo">PUNCHING</h2>
+      </div>
+
+      <div class="nav-container">
+        <ul class="nav-list" id="nav-list">
+
+          <a href="dahboard.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/dashboard.svg" alt="Dashboard">
+              Dashboard
+            </li>
+          </a>
+
+          <a href="emplyee.html" class="nav-link">
+            <li class="nav-item ">
+              <img src="img/user.svg" alt="Employee">
+              Employee
+            </li>
+          </a>
+
+          <a href="checkout.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/import.svg" alt="Check In-Out">
+              Check In-Out
+            </li>
+          </a>
+
+          <a href="project.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/card.svg" alt="Projects">
+              Projects
+            </li>
+          </a>
+
+          <a href="attendance.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/calendar-1.svg" alt="Attendance">
+              Attendance
+            </li>
+          </a>
+
+          <a href="leave.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/clipboard-text.svg" alt="Leaves">
+              Leave
+            </li>
+          </a>
+
+          <a href="holidays.html" class="nav-link active">
+            <li class="nav-item">
+              <img src="img/security-user.svg" alt="Holidays">
+              Holidays
+            </li>
+          </a>
+
+          <a href="performance.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/status-up.svg" alt="Performance">
+              Performance
+            </li>
+          </a>
+
+          <a href="currentTask.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/chart.svg" alt="Current Tasks">
+              Current Task
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/ghost.svg" alt="Suggestion">
+              Suggestion
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/chart-success.svg" alt="Designation">
+              Designation
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/book.svg" alt="Punching Status">
+              Punching Status
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/clipboard-tick.svg" alt="Leaves History">
+              Leaves History
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/setting-2.svg" alt="Setting">
+              Setting
+            </li>
+          </a>
+
+        </ul>
+      </div>
+    </aside>
+
+
+
+    <!-- Main Area -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <header class="header-main">
+        <button class="btn-toggle" id="btn-toggle">☰</button>
+        <div class="header-right-section">
+          <img src="img/noti.svg">
+          <div class="dropdown-wrapper">
+            <div class="dropdown-toggles" id="dropdown-btn">
+              <img src="img/user-img.svg" alt="User Avatar" class="user-avatar">
+              <img src="img/down.svg" alt="Dropdown Icon" class="icon-dropdown">
+            </div>
+            <div class="dropdown-menu-wrapper" id="dropdown-menu-wrapper">
+              <p>Profile</p>
+              <p>Settings</p>
+              <p>Logout</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Holidays Content -->
+      <div class="attendance-container">
+
+        <!-- Page Header -->
+        <div class="attendance-header">
+          <h1 class="page-title">Holidays</h1>
+        </div>
+
+        <!-- Search and Add Button -->
+        <div class="holidays-top-bar">
+          <div class="search-box-holidays">
+            <img src="img/search.svg" alt="Search" class="search-icon-holidays">
+            <input type="text" placeholder="Search..." class="search-input-holidays">
+          </div>
+          <button class="btn-add-holiday">
+            <span class="plus-icon">+</span> ADD
+          </button>
+        </div>
+
+        <!-- Holidays Table -->
+        <div class="table-wrapper">
+          <table class="attendance-table holidays-table">
+            <thead>
+              <tr>
+                <th>Holidays Title</th>
+                <th>Date</th>
+                <th>Day</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Row 1 -->
+              <tr>
+                <td>Republic Days</td>
+                <td>3 Apr, 2025</td>
+                <td>Wednesday</td>
+                <td>
+                  <button class="action-dots">
+                    <img src="img/more.svg" alt="More">
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 2 -->
+              <tr>
+                <td>Gandhi Jay anti</td>
+                <td>2 Oct, 2025</td>
+                <td>Friday</td>
+                <td>
+                  <button class="action-dots">
+                    <img src="img/more.svg" alt="More">
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 3 -->
+              <tr>
+                <td>Republic Days</td>
+                <td>15 Aug, 2025</td>
+                <td>Friday</td>
+                <td>
+                  <button class="action-dots">
+                    <img src="img/more.svg" alt="More">
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 4 -->
+              <tr>
+                <td>Holi Festival</td>
+                <td>12 Mar, 2025</td>
+                <td>Thursday</td>
+                <td>
+                  <button class="action-dots">
+                    <img src="img/more.svg" alt="More">
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 5 -->
+              <tr>
+                <td>Independence Day</td>
+                <td>2 Oct, 2025</td>
+                <td>Saturday</td>
+                <td>
+                  <button class="action-dots">
+                    <img src="img/more.svg" alt="More">
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 6 -->
+              <tr>
+                <td>Gandhi Jay anti</td>
+                <td>2 Oct, 2025</td>
+                <td>Friday</td>
+                <td>
+                  <button class="action-dots">
+                    <img src="img/more.svg" alt="More">
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 7 -->
+              <tr>
+                <td>Republic Days</td>
+                <td>15 Aug, 2025</td>
+                <td>Saturday</td>
+                <td>
+                  <button class="action-dots">
+                    <img src="img/more.svg" alt="More">
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 8 -->
+              <tr>
+                <td>Republic Days</td>
+                <td>2 Oct, 2025</td>
+                <td>Friday</td>
+                <td>
+                  <button class="action-dots">
+                    <img src="img/more.svg" alt="More">
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 9 -->
+              <tr>
+                <td>Gandhi Jay anti</td>
+                <td>2 Oct, 2025</td>
+                <td>Friday</td>
+                <td>
+                  <button class="action-dots">
+                    <img src="img/more.svg" alt="More">
+                  </button>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Pagination -->
+        <div class="table-footer">
+          <div class="rows-selector">
+            <select class="rows-dropdown">
+              <option>20 Rows</option>
+              <option>50 Rows</option>
+              <option>100 Rows</option>
+            </select>
+          </div>
+          <div class="pagination">
+            <button class="page-btn prev">&lt;</button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn next">&gt;</button>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

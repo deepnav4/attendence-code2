@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container-main">
+
+    <!-- Sidebar -->
+    <aside class="panel-sidebar">
+      <div class="panel-header">
+        <h2 class="panel-logo">PUNCHING</h2>
+      </div>
+
+      <div class="nav-container">
+        <ul class="nav-list" id="nav-list">
+
+          <a href="dahboard.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/dashboard.svg" alt="Dashboard">
+              Dashboard
+            </li>
+          </a>
+
+          <a href="emplyee.html" class="nav-link">
+            <li class="nav-item ">
+              <img src="img/user.svg" alt="Employee">
+              Employee
+            </li>
+          </a>
+
+          <a href="checkout.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/import.svg" alt="Check In-Out">
+              Check In-Out
+            </li>
+          </a>
+
+          <a href="project.html" class="nav-link active">
+            <li class="nav-item">
+              <img src="img/card.svg" alt="Projects">
+              Projects
+            </li>
+          </a>
+
+          <a href="attendance.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/calendar-1.svg" alt="Attendance">
+              Attendance
+            </li>
+          </a>
+
+          <a href="leave.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/clipboard-text.svg" alt="Leaves">
+              Leave
+            </li>
+          </a>
+
+          <a href="holidays.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/security-user.svg" alt="Holidays">
+              Holidays
+            </li>
+          </a>
+
+          <a href="performance.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/status-up.svg" alt="Performance">
+              Performance
+            </li>
+          </a>
+
+          <a href="currentTask.html" class="nav-link">
+            <li class="nav-item">
+              <img src="img/chart.svg" alt="Current Tasks">
+              Current Task
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/ghost.svg" alt="Suggestion">
+              Suggestion
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/chart-success.svg" alt="Designation">
+              Designation
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/book.svg" alt="Punching Status">
+              Punching Status
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/clipboard-tick.svg" alt="Leaves History">
+              Leaves History
+            </li>
+          </a>
+
+          <a href="#" class="nav-link">
+            <li class="nav-item">
+              <img src="img/setting-2.svg" alt="Setting">
+              Setting
+            </li>
+          </a>
+
+        </ul>
+      </div>
+    </aside>
+
+
+
+    <!-- Main Area -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <header class="header-main">
+        <button class="btn-toggle" id="btn-toggle">☰</button>
+        <div class="header-right-section">
+          <img src="img/noti.svg">
+          <div class="dropdown-wrapper">
+            <div class="dropdown-toggles" id="dropdown-btn">
+              <img src="img/user-img.svg" alt="User Avatar" class="user-avatar">
+              <img src="img/down.svg" alt="Dropdown Icon" class="icon-dropdown">
+            </div>
+            <div class="dropdown-menu-wrapper" id="dropdown-menu-wrapper">
+              <p>Profile</p>
+              <p>Settings</p>
+              <p>Logout</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Projects Content -->
+      <div class="projects-container">
+
+        <!-- Page Header -->
+        <div class="projects-header">
+          <h1 class="page-title">Projects</h1>
+        </div>
+
+        <!-- Filters and Actions -->
+        <div class="projects-filters">
+          <div class="left-filters">
+            <div class="search-box">
+              <img src="img/search.svg" alt="Search">
+              <input type="text" placeholder="Search...">
+            </div>
+            <select class="filter-dropdown">
+              <option>Current</option>
+              <option>All</option>
+              <option>Completed</option>
+              <option>On Hold</option>
+            </select>
+          </div>
+          <button class="btn-add" data-bs-toggle="modal" data-bs-target="#myModal">
+            <span>+</span>
+            ADD
+          </button>
+        </div>
+
+        <!-- Projects Table -->
+        <div class="table-wrapper">
+          <table class="projects-table">
+            <thead>
+              <tr>
+                <th>
+                  Performance Project
+                  <img src="img/down.svg" alt="Sort" class="sort-icon">
+                </th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Total Hours</th>
+                <th>Consumed Hours</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Row 1 -->
+              <tr>
+                <td>
+                  <div class="project-name">
+                    <div class="progress-circle pink">
+                      <svg width="52" height="52">
+                        <circle cx="26" cy="26" r="22" fill="none" stroke="#fce7f3" stroke-width="4" />
+                        <circle cx="26" cy="26" r="22" fill="none" stroke="#ec4899" stroke-width="4"
+                          stroke-dasharray="138.2" stroke-dashoffset="93.4" transform="rotate(-90 26 26)" />
+                      </svg>
+                      <span class="progress-text">32%</span>
+                    </div>
+                    <span>Meetpsa</span>
+                  </div>
+                </td>
+                <td>3 Apr, 2025</td>
+                <td>12 Nov, 2025</td>
+                <td>200 hr</td>
+                <td>180 hr</td>
+                <td>
+                  <div class="menu-container">
+                    <button class="menu-dots">
+                      <img src="img/more.svg" alt="More">
+                    </button>
+                    <div class="menu-popup">
+                      <button class="delete">Edit</button>
+                      <button class="delete">Delete</button>
+                      <button class="delete">Hold</button>
+                      <button class="delete">Completed</button>
+                      <button class="delete">Task</button>
+                      <button class="delete">History</button>
+                      <button class="delete">Feedback</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Row 2 -->
+              <tr>
+                <td>
+                  <div class="project-name">
+                    <div class="progress-circle blue">
+                      <svg width="52" height="52">
+                        <circle cx="26" cy="26" r="22" fill="none" stroke="#dbeafe" stroke-width="4" />
+                        <circle cx="26" cy="26" r="22" fill="none" stroke="#3b82f6" stroke-width="4"
+                          stroke-dasharray="138.2" stroke-dashoffset="24.9" transform="rotate(-90 26 26)" />
+                      </svg>
+                      <span class="progress-text">82%</span>
+                    </div>
+                    <span>Reily Restless</span>
+                  </div>
+                </td>
+                <td>14 Sep, 2025</td>
+                <td>15 Sep, 2025</td>
+                <td>160 hr</td>
+                <td>140 hr</td>
+                <td>
+                  <div class="menu-container">
+                    <button class="menu-dots">
+                      <img src="img/more.svg" alt="More">
+                    </button>
+                    <div class="menu-popup">
+                      <button class="delete">Edit</button>
+                      <button class="delete">Delete</button>
+                      <button class="delete">Hold</button>
+                      <button class="delete">Completed</button>
+                      <button class="delete">Task</button>
+                      <button class="delete">History</button>
+                      <button class="delete">Feedback</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Row 3 -->
+              <tr>
+                <td>
+                  <div class="project-name">
+                    <div class="progress-circle yellow">
+                      <svg width="52" height="52">
+                        <circle cx="26" cy="26" r="22" fill="none" stroke="#fef3c7" stroke-width="4" />
+                        <circle cx="26" cy="26" r="22" fill="none" stroke="#f59e0b" stroke-width="4"
+                          stroke-dasharray="138.2" stroke-dashoffset="69.1" transform="rotate(-90 26 26)" />
+                      </svg>
+                      <span class="progress-text">50%</span>
+                    </div>
+                    <span>Conneckta</span>
+                  </div>
+                </td>
+                <td>14 May, 2025</td>
+                <td>18 Nov, 2025</td>
+                <td>330 hr</td>
+                <td>233 hr</td>
+                <td>
+                  <button class="btn-more">
+                    <img src="img/more.svg" alt="More">
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 4 -->
+              <tr>
+                <td>
+                  <div class="project-name">
+                    <div class="progress-circle blue">
+                      <svg width="52" height="52">
+                        <circle cx="26" cy="26" r="22" fill="none" stroke="#dbeafe" stroke-width="4" />
+                        <circle cx="26" cy="26" r="22" fill="none" stroke="#3b82f6" stroke-width="4"
+                          stroke-dasharray="138.2" stroke-dashoffset="24.9" transform="rotate(-90 26 26)" />
+                      </svg>
+                      <span class="progress-text">82%</span>
+                    </div>
+                    <span>Punching</span>
+                  </div>
+                </td>
+                <td>3 Apr, 2025</td>
+                <td>12 Nov, 2025</td>
+                <td>200 hr</td>
+                <td>180 hr</td>
+                <td>
+                  <button class="btn-more">
+                    <img src="img/more.svg" alt="More">
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 5 -->
+              <tr>
+                <td>
+                  <div class="project-name">
+                    <div class="progress-circle pink">
+                      <svg width="52" height="52">
+                        <circle cx="26" cy="26" r="22" fill="none" stroke="#fce7f3" stroke-width="4" />
+                        <circle cx="26" cy="26" r="22" fill="none" stroke="#ec4899" stroke-width="4"
+                          stroke-dasharray="138.2" stroke-dashoffset="93.4" transform="rotate(-90 26 26)" />
+                      </svg>
+                      <span class="progress-text">32%</span>
+                    </div>
+                    <span>Ad-Marketing</span>
+                  </div>
+                </td>
+                <td>3 Apr, 2025</td>
+                <td>12 Nov, 2025</td>
+                <td>200 hr</td>
+                <td>180 hr</td>
+                <td>
+                  <button class="btn-more">
+                    <img src="img/more.svg" alt="More">
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 6 -->
+              <tr>
+                <td>
+                  <div class="project-name">
+                    <div class="progress-circle blue">
+                      <svg width="52" height="52">
+                        <circle cx="26" cy="26" r="22" fill="none" stroke="#dbeafe" stroke-width="4" />
+                        <circle cx="26" cy="26" r="22" fill="none" stroke="#3b82f6" stroke-width="4"
+                          stroke-dasharray="138.2" stroke-dashoffset="24.9" transform="rotate(-90 26 26)" />
+                      </svg>
+                      <span class="progress-text">82%</span>
+                    </div>
+                    <span>Delta HR</span>
+                  </div>
+                </td>
+                <td>3 Apr, 2025</td>
+                <td>12 Nov, 2025</td>
+                <td>200 hr</td>
+                <td>180 hr</td>
+                <td>
+                  <button class="btn-more">
+                    <img src="img/more.svg" alt="More">
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 7 -->
+              <tr>
+                <td>
+                  <div class="project-name">
+                    <div class="progress-circle yellow">
+                      <svg width="52" height="52">
+                        <circle cx="26" cy="26" r="22" fill="none" stroke="#fef3c7" stroke-width="4" />
+                        <circle cx="26" cy="26" r="22" fill="none" stroke="#f59e0b" stroke-width="4"
+                          stroke-dasharray="138.2" stroke-dashoffset="69.1" transform="rotate(-90 26 26)" />
+                      </svg>
+                      <span class="progress-text">50%</span>
+                    </div>
+                    <span>Samma</span>
+                  </div>
+                </td>
+                <td>3 Apr, 2025</td>
+                <td>12 Nov, 2025</td>
+                <td>200 hr</td>
+                <td>180 hr</td>
+                <td>
+                  <button class="btn-more">
+                    <img src="img/more.svg" alt="More">
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 8 -->
+              <tr>
+                <td>
+                  <div class="project-name">
+                    <div class="progress-circle pink">
+                      <svg width="52" height="52">
+                        <circle cx="26" cy="26" r="22" fill="none" stroke="#fce7f3" stroke-width="4" />
+                        <circle cx="26" cy="26" r="22" fill="none" stroke="#ec4899" stroke-width="4"
+                          stroke-dasharray="138.2" stroke-dashoffset="93.4" transform="rotate(-90 26 26)" />
+                      </svg>
+                      <span class="progress-text">32%</span>
+                    </div>
+                    <span>Pastor Pals</span>
+                  </div>
+                </td>
+                <td>3 Apr, 2025</td>
+                <td>12 Nov, 2025</td>
+                <td>200 hr</td>
+                <td>180 hr</td>
+                <td>
+                  <button class="btn-more">
+                    <img src="img/more.svg" alt="More">
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 9 -->
+              <tr>
+                <td>
+                  <div class="project-name">
+                    <div class="progress-circle yellow">
+                      <svg width="52" height="52">
+                        <circle cx="26" cy="26" r="22" fill="none" stroke="#fef3c7" stroke-width="4" />
+                        <circle cx="26" cy="26" r="22" fill="none" stroke="#f59e0b" stroke-width="4"
+                          stroke-dasharray="138.2" stroke-dashoffset="69.1" transform="rotate(-90 26 26)" />
+                      </svg>
+                      <span class="progress-text">50%</span>
+                    </div>
+                    <span>LoveCricle</span>
+                  </div>
+                </td>
+                <td>3 Apr, 2025</td>
+                <td>12 Nov, 2025</td>
+                <td>200 hr</td>
+                <td>180 hr</td>
+                <td>
+                  <button class="btn-more">
+                    <img src="img/more.svg" alt="More">
+                  </button>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Footer with Rows dropdown and Pagination -->
+        <div class="table-footer">
+          <select class="rows-dropdown">
+            <option>20 Rows</option>
+            <option>50 Rows</option>
+            <option>100 Rows</option>
+          </select>
+
+          <div class="pagination">
+            <button class="page-btn">
+              <img src="img/right.svg" alt="Previous">
+            </button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">
+              <img src="img/left.svg" alt="Next">
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class=" modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" style="font-size: 20px;">Add Project</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="profile-form-box">
+            <form class="user-entry-form">
+              <div class="input-field">
+                <label>Project Name</label>
+                <input type="text" placeholder="First Name">
+              </div>
+              <div class="input-field">
+                <label>Project Manager</label>
+                <select>
+                  <option>Select</option>
+                  <option>Manpreet</option>
+                  <option>Rajeev</option>
+                </select>
+              </div>
+              <div class="input-field">
+                <label>Designation</label>
+                <textarea type="text" placeholder="Type here..."></textarea>
+              </div>
+
+              <div class="input-field">
+                <label>Start Date</label>
+                <input type="date" placeholder="">
+              </div>
+
+              <div class="input-field">
+                <label>End Date</label>
+                <input type="date" placeholder="r">
+              </div>
+
+              <div class="input-field">
+                <label>Total-hours</label>
+                <input type="number" placeholder="Enter Total-hours">
+              </div>
+
+              <!-- Hours Fraction Section -->
+              <div class="hours-fraction-section">
+                <h5 class="fraction-title">Hours Fraction</h5>
+                <div id="fractionFieldsContainer">
+                  <!-- Initial fraction field -->
+                  <div class="fraction-field-row">
+                    <div class="fraction-inputs">
+                      <select class="employee-select">
+                        <option>-- Employee --</option>
+                        <option>Manpreet</option>
+                        <option>Rajeev</option>
+                        <option>John Doe</option>
+                        <option>Jane Smith</option>
+                      </select>
+                      <input type="number" class="hour-input" placeholder="Hour">
+                      <button type="button" class="add-fraction-btn">Add +</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="end-button">
+                <button type="submit" class="submit-btn">Submit</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+  <script>
+    document.querySelectorAll('.menu-dots').forEach(button => {
+      button.addEventListener('click', (e) => {
+        const popup = button.nextElementSibling;
+        popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+
+    // Close popup if clicked outside
+    document.addEventListener('click', (e) => {
+      document.querySelectorAll('.menu-popup').forEach(pp => {
+        if (!pp.contains(e.target) && !pp.previousElementSibling.contains(e.target)) {
+          pp.style.display = 'none';
+        }
+      });
+    });
+
+    // Hours Fraction Dynamic Fields Logic
+    const container = document.getElementById('fractionFieldsContainer');
+
+    // Function to update all buttons (add last one, remove for others)
+    function updateButtons() {
+      const allRows = container.querySelectorAll('.fraction-field-row');
+      
+      allRows.forEach((row, index) => {
+        const existingBtn = row.querySelector('.add-fraction-btn, .remove-fraction-btn');
+        
+        // If this is the last row, show Add button
+        if (index === allRows.length - 1) {
+          if (existingBtn.classList.contains('remove-fraction-btn')) {
+            existingBtn.textContent = 'Add +';
+            existingBtn.className = 'add-fraction-btn';
+          }
+        } else {
+          // For other rows, show Remove button
+          if (existingBtn.classList.contains('add-fraction-btn')) {
+            existingBtn.textContent = 'Remove';
+            existingBtn.className = 'remove-fraction-btn';
+          }
+        }
+      });
+    }
+
+    // Event delegation for Add/Remove buttons
+    container.addEventListener('click', function(e) {
+      if (e.target.classList.contains('add-fraction-btn')) {
+        // Add new field
+        const newRow = document.createElement('div');
+        newRow.className = 'fraction-field-row';
+        newRow.innerHTML = `
+          <div class="fraction-inputs">
+            <select class="employee-select">
+              <option>-- Employee --</option>
+              <option>Manpreet</option>
+              <option>Rajeev</option>
+              <option>John Doe</option>
+              <option>Jane Smith</option>
+            </select>
+            <input type="number" class="hour-input" placeholder="Hour">
+            <button type="button" class="add-fraction-btn">Add +</button>
+          </div>
+        `;
+        container.appendChild(newRow);
+        updateButtons();
+      } else if (e.target.classList.contains('remove-fraction-btn')) {
+        // Remove this field
+        e.target.closest('.fraction-field-row').remove();
+        updateButtons();
+      }
+    });
+
+    // Initialize buttons on page load
+    updateButtons();
+  </script>
+</body>
+
+</html>
