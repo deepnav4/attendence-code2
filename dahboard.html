@@ -474,28 +474,43 @@
     </main>
   </div>
 
-  <div class="menu-container">
-    <button class="menu-dots">
-      <img src="img/more.svg" alt="More">
-    </button>
-    <div class="menu-popup">
-      <button class="edit">Edit</button>
-      <button class="delete">Delete</button>
-    </div>
-  </div>
+  <script src="js/script.js"></script>
+  <script>
+    // add active class to current nav link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add('active');
+      }
+    });
 
+    // Three-dot menu toggle
+    document.querySelectorAll('.menu-dots').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const popup = button.nextElementSibling;
+
+        // Close all other popups
+        document.querySelectorAll('.menu-popup').forEach(p => {
+          if (p !== popup) p.style.display = 'none';
+        });
+
+        // Toggle current popup
+        if (popup) {
+          popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+        }
+      });
+    });
+
+    // Close popup if clicked outside
+    document.addEventListener('click', (e) => {
+      document.querySelectorAll('.menu-popup').forEach(pp => {
+        if (!pp.contains(e.target) && !pp.previousElementSibling.contains(e.target)) {
+          pp.style.display = 'none';
+        }
+      });
+    });
+  </script>
 </body>
-
-<script>
-  // add active class to current nav link
-  const navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach(link => {
-    if (link.href === window.location.href) {
-      link.classList.add('active');
-    }
-  });
-</script>
-
-
 
 </html>
