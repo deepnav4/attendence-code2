@@ -4553,3 +4553,401 @@ body {
     min-width: 80px;
   }
 }
+
+/* ==================== Daily Status Page Styles ==================== */
+
+.daily-status-container {
+  padding: 24px 32px;
+  background: #f9fafb;
+  min-height: calc(100vh - 80px);
+}
+
+.daily-status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.daily-status-header .page-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+/* Daily Status Table Wrapper */
+.daily-status-table-wrapper {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e2e8f0;
+  margin-bottom: 20px;
+}
+
+.daily-status-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.daily-status-table thead {
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.daily-status-table th {
+  padding: 16px 24px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.daily-status-table th:last-child {
+  text-align: center;
+}
+
+.daily-status-table tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+  transition: background-color 0.2s ease;
+}
+
+.daily-status-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.daily-status-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.daily-status-table td {
+  padding: 16px 24px;
+  font-size: 14px;
+  color: #0f172a;
+  vertical-align: middle;
+}
+
+.daily-status-table td:last-child {
+  text-align: center;
+}
+
+/* Employee Info Cell */
+.employee-info-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.employee-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.employee-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.employee-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f172a;
+  line-height: 1.4;
+}
+
+.employee-email {
+  font-size: 12px;
+  font-weight: 400;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* Responsive Styles for Daily Status Page */
+@media (max-width: 768px) {
+  .daily-status-container {
+    padding: 16px;
+  }
+
+  .daily-status-table th,
+  .daily-status-table td {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+
+  .employee-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .employee-name {
+    font-size: 13px;
+  }
+
+  .employee-email {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .daily-status-table {
+    font-size: 12px;
+  }
+
+  .daily-status-table th,
+  .daily-status-table td {
+    padding: 10px 12px;
+  }
+
+  .employee-info-cell {
+    gap: 8px;
+  }
+
+  .employee-avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .employee-name {
+    font-size: 12px;
+  }
+
+  .employee-email {
+    font-size: 10px;
+  }
+}
+
+/* ==================== Setting Page Styles ==================== */
+
+.setting-container {
+  padding: 32px 40px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.setting-header {
+  margin-bottom: 32px;
+}
+
+.setting-header .page-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+/* Settings Grid Layout */
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Setting Card */
+.setting-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.setting-card-wide {
+  grid-column: span 2;
+}
+
+.setting-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+}
+
+/* Setting Form */
+.setting-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.setting-form-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group-full {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #475569;
+  margin: 0;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  color: #1e293b;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-input::placeholder {
+  color: #cbd5e1;
+}
+
+.form-input[type="password"] {
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 2px;
+}
+
+select.form-input {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 48px;
+}
+
+/* Submit Button */
+.btn-submit-setting {
+  padding: 12px 32px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  align-self: flex-start;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.btn-submit-setting:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+}
+
+.btn-submit-setting:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+}
+
+.setting-form-two-col .btn-submit-setting {
+  align-self: flex-end;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .settings-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .setting-card-wide {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .setting-container {
+    padding: 24px 20px;
+  }
+
+  .setting-header .page-title {
+    font-size: 24px;
+  }
+
+  .settings-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .setting-card {
+    padding: 20px;
+  }
+
+  .setting-card-wide {
+    grid-column: span 1;
+  }
+
+  .setting-form-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group-full {
+    grid-column: span 1;
+    justify-content: flex-start;
+  }
+
+  .btn-submit-setting {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .setting-container {
+    padding: 16px;
+  }
+
+  .setting-header .page-title {
+    font-size: 20px;
+  }
+
+  .setting-card {
+    padding: 16px;
+  }
+
+  .setting-card-title {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .form-label {
+    font-size: 12px;
+  }
+
+  .form-input {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .btn-submit-setting {
+    padding: 10px 24px;
+    font-size: 12px;
+  }
+}
