@@ -189,6 +189,17 @@
           <div class="setting-card">
             <h3 class="setting-card-title">Personal Details</h3>
             <form class="setting-form" id="personal-details-form">
+              
+              <!-- Image Upload Section -->
+              <div class="form-group">
+                <div class="image-upload-container">
+                  <input type="file" id="profile-image-upload" accept="image/*" style="display: none;">
+                  <label for="profile-image-upload" class="image-upload-box">
+                    <span class="upload-icon">+</span>
+                  </label>
+                </div>
+              </div>
+            
               <div class="form-group">
                 <label class="form-label">Name</label>
                 <input type="text" class="form-input" placeholder="">
@@ -201,12 +212,16 @@
             </form>
           </div>
 
-          <!-- Push Notification Server Key Section -->
+          <!-- Automatically Punch out Section -->
           <div class="setting-card">
-            <h3 class="setting-card-title">Push Notification Server Key</h3>
-            <form class="setting-form" id="notification-form">
+            <h3 class="setting-card-title">Automatically Punch out and close current running tasks.</h3>
+            <form class="setting-form" id="auto-punch-form">
               <div class="form-group">
-                <label class="form-label">Server Key</label>
+                <label class="form-label">Lunch Time</label>
+                <input type="text" class="form-input" placeholder="">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Evening time</label>
                 <input type="text" class="form-input" placeholder="">
               </div>
               <button type="submit" class="btn-submit-setting">SUBMIT</button>
@@ -252,9 +267,9 @@
           </div>
 
           <!-- Office Location Section -->
-          <div class="setting-card setting-card-wide">
+          <div class="setting-card">
             <h3 class="setting-card-title">Add your office location and distance in meters so employee can login with in office area.</h3>
-            <form class="setting-form setting-form-two-col" id="location-form">
+            <form class="setting-form" id="location-form">
               <div class="form-group">
                 <label class="form-label">Latitude</label>
                 <input type="text" class="form-input" placeholder="">
@@ -274,9 +289,67 @@
                   <option>Inactive</option>
                 </select>
               </div>
-              <div class="form-group form-group-full">
-                <button type="submit" class="btn-submit-setting">SUBMIT</button>
+              <button type="submit" class="btn-submit-setting">SUBMIT</button>
+            </form>
+          </div>
+
+          <!-- Reminder for Attendance Section -->
+          <div class="setting-card">
+            <h3 class="setting-card-title">Reminder for Attendance</h3>
+            <form class="setting-form" id="reminder-form">
+              <div class="form-group">
+                <label class="form-label">Title</label>
+                <input type="text" class="form-input" placeholder="">
               </div>
+              <div class="form-group">
+                <label class="form-label">Message</label>
+                <input type="text" class="form-input" placeholder="">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Start Time</label>
+                <input type="text" class="form-input" placeholder="">
+              </div>
+              <div class="form-group">
+                <label class="form-label">End Time</label>
+                <input type="text" class="form-input" placeholder="">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Duration (in minutes)</label>
+                <input type="text" class="form-input" placeholder="">
+              </div>
+              <div class="form-group">
+                <div class="days-grid">
+                  <label class="day-checkbox">
+                    <input type="checkbox" name="days" value="Sunday">
+                    <span>Sunday</span>
+                  </label>
+                  <label class="day-checkbox">
+                    <input type="checkbox" name="days" value="Monday">
+                    <span>Monday</span>
+                  </label>
+                  <label class="day-checkbox">
+                    <input type="checkbox" name="days" value="Tuesday">
+                    <span>Tuesday</span>
+                  </label>
+                  <label class="day-checkbox">
+                    <input type="checkbox" name="days" value="Wednesday">
+                    <span>Wednesday</span>
+                  </label>
+                  <label class="day-checkbox">
+                    <input type="checkbox" name="days" value="Thursday">
+                    <span>Thursday</span>
+                  </label>
+                  <label class="day-checkbox">
+                    <input type="checkbox" name="days" value="Friday">
+                    <span>Friday</span>
+                  </label>
+                  <label class="day-checkbox">
+                    <input type="checkbox" name="days" value="Saturday">
+                    <span>Saturday</span>
+                  </label>
+                </div>
+              </div>
+              <button type="submit" class="btn-submit-setting">SUBMIT</button>
             </form>
           </div>
 
@@ -290,6 +363,22 @@
 
   <script src="js/script.js"></script>
   <script>
+    // Image upload preview
+    document.getElementById('profile-image-upload').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          const uploadBox = document.querySelector('.image-upload-box');
+          uploadBox.style.backgroundImage = `url(${event.target.result})`;
+          uploadBox.style.backgroundSize = 'cover';
+          uploadBox.style.backgroundPosition = 'center';
+          uploadBox.querySelector('.upload-icon').style.display = 'none';
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
     // Form submission handlers
     document.getElementById('change-password-form').addEventListener('submit', function(e) {
       e.preventDefault();
@@ -302,9 +391,9 @@
       alert('Personal details updated successfully!');
     });
 
-    document.getElementById('notification-form').addEventListener('submit', function(e) {
+    document.getElementById('auto-punch-form').addEventListener('submit', function(e) {
       e.preventDefault();
-      alert('Notification settings saved!');
+      alert('Auto punch settings saved!');
     });
 
     document.getElementById('smtp-form').addEventListener('submit', function(e) {
@@ -315,6 +404,11 @@
     document.getElementById('location-form').addEventListener('submit', function(e) {
       e.preventDefault();
       alert('Location settings saved!');
+    });
+
+    document.getElementById('reminder-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Reminder settings saved!');
     });
   </script>
 </body>
